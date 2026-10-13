@@ -2,7 +2,7 @@
 // FRAMEWORK METHODOLOGY DATA
 // ==========================================================================
 
-const frameworkData = [
+window.frameworkData = [
     {
         id: 1,
         title: "Lead Management",

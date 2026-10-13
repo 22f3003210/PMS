@@ -35,8 +35,9 @@ window.openExecutionDrawer = function(phaseId, type, taskIdx) {
     }
 
     // Set Header Info
-    const phase = frameworkData.find(p => p.id === phaseId);
-    const taskName = type === 'client' ? phase.client[taskIdx] : phase.internal[taskIdx];
+    const data = window.frameworkData || [];
+    const phase = data.find(p => p.id === phaseId);
+    const taskName = phase ? (type === 'client' ? phase.client[taskIdx] : phase.internal[taskIdx]) : '';
     
     metaLbl.textContent = `PHASE ${phaseId} - ${type.toUpperCase()}`;
     titleLbl.textContent = taskName;
