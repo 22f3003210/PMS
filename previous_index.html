@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ACME Consulting - Luxury Jewellery Business Management Consulting & Transformation Framework. Interactive presentation and resource planner.">
+    <title>Jewellery Business Consulting & Transformation Framework</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Navbar -->
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo" id="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <polygon points="12 2 22 8.5 12 22 2 8.5" />
+                    <line x1="2" y1="8.5" x2="22" y2="8.5" />
+                    <polyline points="12 2 12 22" />
+                    <line x1="7" y1="5.25" x2="12" y2="22" />
+                    <line x1="17" y1="5.25" x2="12" y2="22" />
+                </svg>
+                <div class="logo-text">
+                    <span class="brand-title">AURA</span>
+                    <span class="brand-subtitle">Consulting & Transformation</span>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <button class="nav-btn active" data-target="home-view" id="btn-nav-home">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    <span>Overview</span>
+                </button>
+                <button class="nav-btn" data-target="presentation-view" id="btn-nav-presentation">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    <span>Presentation</span>
+                </button>
+                <button class="nav-btn" data-target="dashboard-view" id="btn-nav-dashboard">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                    <span>Task Hub</span>
+                </button>
+                <button class="nav-btn" data-target="planner-view" id="btn-nav-planner">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+                    <span>Resource Planner</span>
+                </button>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle Light/Dark Theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Views Container -->
+    <main class="view-container">
+        
+        <!-- VIEW 1: HOME/OVERVIEW -->
+        <section id="home-view" class="app-view active">
+            <div class="hero-section">
+                <div class="hero-badge">Jewellery Consulting & Operations</div>
+                <h1 class="hero-title">Business Consulting & Transformation Framework</h1>
+                <p class="hero-subtitle">
+                    A comprehensive, 9-phase operational roadmap designed to scale luxury jewelry brands, optimize supply chain efficiency, restructure retail departments, and refine long-term strategic pathways.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" onclick="switchView('presentation-view')">
+                        <span>Launch Presentation</span>
+                        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                    <button class="btn btn-secondary" onclick="switchView('dashboard-view')">
+                        <span>Explore Checklist Hub</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Animated Consulting Journey Map -->
+            <div class="journey-map-container">
+                <h2 class="section-title">The Consulting Journey</h2>
+                <p class="section-desc">Click on any phase to explore details in the presentation deck.</p>
+                
+                <div class="journey-flowchart" id="journey-flowchart">
+                    <!-- Javascript will generate this dynamically for interactivity -->
+                </div>
+            </div>
+
+            <!-- Value Proposition / Info Cards -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="card-icon-container">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+                    </div>
+                    <h3>Retail & Atelier Audits</h3>
+                    <p>Rigorous, department-by-department observations covering showroom design, security standards, inventory flows, and craftsmanship handoffs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon-container">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+                    </div>
+                    <h3>Gap & Root Cause Analysis</h3>
+                    <p>Mapping identified operational deficiencies against jewelry industry benchmarks. Validated with structured prioritization matrices.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon-container">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Change & SOP Training</h3>
+                    <p>Establishing bespoke Standard Operating Procedures (SOPs) for high-value assets, clienteling, and cross-departmental handoffs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 2: PRESENTATION / SLIDE DECK -->
+        <section id="presentation-view" class="app-view">
+            <div class="presentation-layout">
+                <!-- Slide Control Header -->
+                <div class="slide-nav-header">
+                    <div class="slide-indicator">
+                        Phase <span id="current-slide-num">1</span> of 9
+                    </div>
+                    <div class="slide-timeline-dots" id="slide-timeline-dots">
+                        <!-- Dots rendered dynamically -->
+                    </div>
+                    <button class="btn-text-action" onclick="switchView('dashboard-view')">
+                        <span>Open in Task Hub</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-inline"><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </button>
+                </div>
+
+                <!-- Slide Canvas -->
+                <div class="slide-canvas" id="slide-canvas">
+                    <!-- A slide container that animates -->
+                    <div class="slide-card" id="active-slide-card">
+                        <div class="slide-meta">
+                            <span class="slide-tag" id="slide-tag-industry">Jewellery Consulting</span>
+                            <span class="slide-phase-lbl" id="slide-phase-lbl">PHASE 1</span>
+                        </div>
+                        <h2 class="slide-title" id="slide-title">Lead Management</h2>
+                        <p class="slide-desc" id="slide-desc">Inception, initial outreach, qualifying potential leads, and establishing initial consultation goals.</p>
+                        
+                        <div class="slide-columns">
+                            <!-- Client Side -->
+                            <div class="slide-col client-col">
+                                <div class="col-header">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="col-icon"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                    <h3>Client-Side Responsibilities</h3>
+                                </div>
+                                <ul class="slide-list" id="slide-client-list">
+                                    <!-- Items loaded dynamically -->
+                                </ul>
+                            </div>
+
+                            <!-- Internal Side -->
+                            <div class="slide-col internal-col">
+                                <div class="col-header">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="col-icon"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                    <h3>Internal Team Tasks</h3>
+                                </div>
+                                <ul class="slide-list" id="slide-internal-list">
+                                    <!-- Items loaded dynamically -->
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="slide-extra-activity" class="slide-footer-info">
+                            <!-- Supporting Activities or Governance notes loaded here dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Keyboard Nav & Bottom Controls -->
+                <div class="slide-nav-footer">
+                    <button class="nav-control-btn" id="prev-slide-btn" aria-label="Previous Slide">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                    </button>
+                    
+                    <div class="slide-instructions">
+                        <span>Use <kbd>←</kbd> <kbd>→</kbd> or <kbd>Space</kbd> to navigate</span>
+                    </div>
+
+                    <button class="nav-control-btn" id="next-slide-btn" aria-label="Next Slide">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 3: TASK HUB (DASHBOARD) -->
+        <section id="dashboard-view" class="app-view">
+            <div class="dashboard-layout">
+                <!-- Sidebar -->
+                <aside class="dashboard-sidebar">
+                    <div class="sidebar-header">
+                        <h3>Methodology Phases</h3>
+                        <span class="badge" id="overall-progress-badge">0% Done</span>
+                    </div>
+                    <div class="sidebar-scroll">
+                        <nav class="phase-selector-list" id="phase-sidebar-nav">
+                            <!-- Generated Dynamically -->
+                        </nav>
+                    </div>
+                </aside>
+
+                <!-- Workspace Details Panel -->
+                <div class="dashboard-workspace">
+                    <div class="workspace-header">
+                        <div class="workspace-title-area">
+                            <span class="workspace-phase-num" id="work-phase-num">Phase 2</span>
+                            <h2 id="work-phase-title">Discovery & Requirements Gathering</h2>
+                        </div>
+                        <div class="workspace-progress-area">
+                            <span class="progress-lbl">Completion</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill" id="work-phase-progress-fill" style="width: 30%"></div>
+                            </div>
+                            <span class="progress-val" id="work-phase-progress-val">30%</span>
+                        </div>
+                    </div>
+
+                    <div class="workspace-content">
+                        <p class="workspace-description" id="work-phase-desc">
+                            Reviewing initial assets, conducting workshops, and structuring preliminary expectations.
+                        </p>
+
+                        <div class="task-grid">
+                            <!-- Client Side Tasks Card -->
+                            <div class="task-group-card client-group">
+                                <div class="task-group-header">
+                                    <span class="client-dot"></span>
+                                    <h4>Client-Side Requirements</h4>
+                                </div>
+                                <div class="task-items-list" id="work-client-task-list">
+                                    <!-- Checkboxes generated dynamically -->
+                                </div>
+                            </div>
+
+                            <!-- Internal Side Tasks Card -->
+                            <div class="task-group-card internal-group">
+                                <div class="task-group-header">
+                                    <span class="internal-dot"></span>
+                                    <h4>Internal Team Tasks</h4>
+                                </div>
+                                <div class="task-items-list" id="work-internal-task-list">
+                                    <!-- Checkboxes generated dynamically -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Special Sub-sections if available -->
+                        <div id="work-governance-section" class="special-section-card hide">
+                            <h5 id="work-special-title">Governance / Supporting Activities</h5>
+                            <ul class="special-items-list" id="work-special-list">
+                                <!-- Extra items -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 4: RESOURCE & BUDGET PLANNER -->
+        <section id="planner-view" class="app-view">
+            <div class="planner-layout">
+                <div class="planner-sidebar">
+                    <div class="planner-card">
+                        <h3>Project Scope & Configurations</h3>
+                        <p class="card-hint">Customize parameters to simulate consulting resource allocation & cost models.</p>
+                        
+                        <form id="planner-form" onsubmit="event.preventDefault();">
+                            <!-- Project Scale Select -->
+                            <div class="form-group">
+                                <label for="project-scale">Target Enterprise Scale</label>
+                                <select id="project-scale" class="form-control">
+                                    <option value="boutique">Single Atelier / Boutique (1-2 stores)</option>
+                                    <option value="regional" selected>Regional Retail Chain (5-15 stores)</option>
+                                    <option value="enterprise">Global Enterprise Brand (15+ stores & factories)</option>
+                                </select>
+                            </div>
+
+                            <!-- Phases Checked -->
+                            <div class="form-group">
+                                <label>Included Phases in Scope</label>
+                                <div class="phase-checkboxes-container" id="planner-phases-checks">
+                                    <!-- Populated dynamically -->
+                                </div>
+                            </div>
+
+                            <!-- Consultant Staffing Counts -->
+                            <div class="form-group">
+                                <label>Target Consultation Squad</label>
+                                <div class="squad-selectors">
+                                    <div class="squad-row">
+                                        <span>Senior Transformation Lead</span>
+                                        <div class="counter-control">
+                                            <button type="button" class="btn-counter" onclick="adjustSquad('lead', -1)">-</button>
+                                            <span id="squad-lead-val">1</span>
+                                            <button type="button" class="btn-counter" onclick="adjustSquad('lead', 1)">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="squad-row">
+                                        <span>Retail & Audit Specialist</span>
+                                        <div class="counter-control">
+                                            <button type="button" class="btn-counter" onclick="adjustSquad('auditor', -1)">-</button>
+                                            <span id="squad-auditor-val">2</span>
+                                            <button type="button" class="btn-counter" onclick="adjustSquad('auditor', 1)">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="squad-row">
+                                        <span>Change & SOP Trainer</span>
+                                        <div class="counter-control">
+                                            <button type="button" class="btn-counter" onclick="adjustSquad('trainer', -1)">-</button>
+                                            <span id="squad-trainer-val">1</span>
+                                            <button type="button" class="btn-counter" onclick="adjustSquad('trainer', 1)">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="squad-row">
+                                        <span>Operations / Logistics Analyst</span>
+                                        <div class="counter-control">
+                                            <button type="button" class="btn-counter" onclick="adjustSquad('analyst', -1)">-</button>
+                                            <span id="squad-analyst-val">1</span>
+                                            <button type="button" class="btn-counter" onclick="adjustSquad('analyst', 1)">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="planner-workspace">
+                    <div class="workspace-header">
+                        <div class="workspace-title-area">
+                            <span class="workspace-phase-num">Simulation Engine</span>
+                            <h2>Resource & Timeline Estimations</h2>
+                        </div>
+                    </div>
+
+                    <div class="planner-results-grid">
+                        <div class="result-tile">
+                            <span class="tile-label">Estimated Project Duration</span>
+                            <div class="tile-value"><span id="calc-duration">12</span> <span class="tile-unit">Weeks</span></div>
+                            <p class="tile-desc">Based on phase selection & complexity modifiers.</p>
+                        </div>
+                        <div class="result-tile">
+                            <span class="tile-label">Consulting Professional Fees</span>
+                            <div class="tile-value"><span id="calc-fees">$84,000</span></div>
+                            <p class="tile-desc">Weighted blended rate based on assigned staffing squad.</p>
+                        </div>
+                        <div class="result-tile">
+                            <span class="tile-label">Total Simulated Consulting Hours</span>
+                            <div class="tile-value"><span id="calc-hours">480</span> <span class="tile-unit">Hrs</span></div>
+                            <p class="tile-desc">Forecasted effort across discovery, audit, and SOP drafting.</p>
+                        </div>
+                    </div>
+
+                    <div class="chart-container-card">
+                        <h3>Simulated Resource Utilization by Phase</h3>
+                        <p class="card-hint">Forecasted work distribution based on complexity profiles of selected phases.</p>
+                        <div class="utilization-chart" id="utilization-chart">
+                            <!-- Dynamically Drawn SVG / DOM Bars -->
+                        </div>
+                    </div>
+                    
+                    <div class="consulting-squad-breakdown">
+                        <h3>Consulting Team Allocation</h3>
+                        <div class="squad-cards-list" id="squad-cards-container">
+                            <!-- Squad cards generated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 AURA Business Consulting. Custom Jewellery Operations Transformation Framework.</p>
+            <div class="footer-links">
+                <span>v1.2.0</span>
+                <span class="divider">|</span>
+                <a href="#" onclick="switchView('home-view'); return false;">System Overview</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- App Scripts -->
+    <script src="app.js"></script>
+    <script src="resource-manager.js"></script>
+</body>
+</html>
